@@ -32,7 +32,6 @@ this will install `graphix` and [IBMQ interface](https://github.com/TeamGraphix/
 We are currently adding more quantum device interfaces.
 Please suggest in [issues](https://github.com/TeamGraphix/graphix/issues) if you have any particular device in mind!
 
-
 ## Next Steps
 
 - We have a few [demos](https://graphix.readthedocs.io/en/latest/gallery/index.html) showing basic usages of `Graphix`.
@@ -58,6 +57,17 @@ Many thanks for letting us know about this work, we will properly mention this w
 ## Contributing
 
 We use [GitHub issues](https://github.com/TeamGraphix/graphix/issues) for tracking requests and bugs. 
+
+Set-up a development environment inside a python container: 
+1. Create a `Dockerfile`
+  ```
+FROM python:3 
+  WORKDIR /usr/src/app
+  CMD [ "bash" ]
+  ```
+2. Create the container `docker build -t python3 .`
+3. Run it with a link to the local directory `docker run -it --rm --name graphix -v "$PWD:/usr/src/app" python3` 
+4. Install requirements `pip install -r requirements.txt`
 
 ## Discord Server
 
