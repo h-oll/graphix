@@ -60,14 +60,14 @@ We use [GitHub issues](https://github.com/TeamGraphix/graphix/issues) for tracki
 
 Set-up a development environment inside a python container: 
 1. Create a `Dockerfile`
-  ```
+```
 FROM python:3 
-  WORKDIR /usr/src/app
-  CMD [ "bash" ]
-  ```
+WORKDIR /usr/src/app
+CMD [ "bash" ]
+```
 2. Create the container `docker build -t python3 .`
 3. Run it with a link to the local directory `docker run -it --rm --name graphix -v "$PWD:/usr/src/app" python3` 
-4. Install requirements `pip install -r requirements.txt`
+4. Install requirements (if current directory was graphix repository) `pip install -r requirements.txt`
 
 ## Discord Server
 
